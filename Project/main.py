@@ -14,7 +14,7 @@ user_state = {}  # 'waiting_for_numbers', 'waiting_for_operation'
 def start(message):
     user_name = message.from_user.first_name
     bot.send_message(message.chat.id, f"Здравствуйте, {user_name}! Для начала я вас попрошу ввести ряд чисел. Это будет не трудно?")
-    bot.send_message(message.chat.id, "И кстати, если вам вздумается работать над иным рядом чисел, то просто введите её после работы над прежним")
+    bot.send_message(message.chat.id, "И кстати, если вам вздумается работать над иным рядом чисел, то просто введите команду \start после работы над прежним")
 
     bot.send_message(message.chat.id, "Также оповещаюю о том, что по случае вашего желания, вы можете ознакомиться с контактами разработки.")
     markup = types.InlineKeyboardMarkup()
